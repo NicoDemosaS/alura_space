@@ -10,7 +10,7 @@ class FotografiaForms(forms.ModelForm):
     widget = {
         'nome': forms.TextInput(attrs={'class':'form-control'}),
         'legenda': forms.TextInput(attrs={'class':'form-control'}),
-        'categoria': forms.SelectInput(attrs={'class':'form-control'}),
+        'categoria': forms.Select(attrs={'class':'form-control'}),
         'descricao': forms.Textarea(attrs={'class':'form-control'}),
         'foto': forms.FileInput(attrs={'class':'form-control'}),
         'data_fotografia': forms.DateInput(
@@ -19,5 +19,5 @@ class FotografiaForms(forms.ModelForm):
                 'type':'date',
                 'class':'form-control'},
             ),
-        'usuario': forms.SelectInput(attr={'class':'form-control'})
+        'usuario': forms.Select(attr={'class':'form-control'})
     }        
